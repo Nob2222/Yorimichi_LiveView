@@ -50,7 +50,7 @@ function AltairComponent({ isVideoOn }: AltairProps) {
       generationConfig: {
         responseModalities: "audio",
         speechConfig: {
-          voiceConfig: { prebuiltVoiceConfig: { voiceName: "Fenrir" } }, //"Puck" | "Charon" | "Kore"1 | "Fenrir" | "Aoede" 
+          voiceConfig: { prebuiltVoiceConfig: { voiceName: "Aoede" } }, //"Puck" | "Charon" | "Kore"1 | "Fenrir" | "Aoede" 
         },
       },
       systemInstruction: {

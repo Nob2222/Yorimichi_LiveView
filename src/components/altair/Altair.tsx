@@ -45,7 +45,7 @@ function AltairComponent() {
       generationConfig: {
         responseModalities: "audio",
         speechConfig: {
-          voiceConfig: { prebuiltVoiceConfig: { voiceName: "Charon" } }, //"Puck" | "Charon" | "Kore" | "Fenrir" | "Aoede" 
+          voiceConfig: { prebuiltVoiceConfig: { voiceName: "Kore" } }, //"Puck" | "Charon" | "Kore" | "Fenrir" | "Aoede" 
         },
       },
       systemInstruction: {

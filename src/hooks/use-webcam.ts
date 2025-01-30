@@ -42,7 +42,8 @@ export function useWebcam(): UseMediaStreamResult {
 
   const start = async () => {
     const mediaStream = await navigator.mediaDevices.getUserMedia({
-      video: true,
+      // video: true,
+      video: { facingMode: "environment" }, // 背面カメラを優先
     });
     setStream(mediaStream);
     setIsStreaming(true);

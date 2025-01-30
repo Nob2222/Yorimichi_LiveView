@@ -117,7 +117,7 @@ body {
   background: var(--Neutral-5);
   color: var(--gray-300);
   display: flex;
-  height: 100vh;
+  height: 90vh;
   width: 100vw;
 
   a,
@@ -170,26 +170,3 @@ body {
   max-height: fit-content;
 }
 
-
-/* スマホ向けのスタイルを追加 */
-@media (max-width: 768px) {
-  .streaming-console {
-    height: auto; /* 高さを自動調整 */
-    flex-direction: column; /* レイアウトを縦方向に変更 */
-  }
-
-  main {
-    justify-content: flex-start; /* コンテンツを上部に配置 */
-    padding: 1rem; /* パディングを追加 */
-  }
-
-  .main-app-area {
-    flex-direction: column; /* レイアウトを縦方向に変更 */
-    align-items: stretch; /* 子要素を幅いっぱいに */
-  }
-
-  .stream {
-    max-width: 100%; /* 幅を100%に */
-    border-radius: 16px; /* 角の丸みを調整 */
-  }
-}

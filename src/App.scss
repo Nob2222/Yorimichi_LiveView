@@ -174,18 +174,29 @@ body {
 
 /* 見渡しモード の文字設定 */
 .altair-overlay {
-  position: relative;
+  position: absolute; /* 親コンテナに対して絶対位置 */
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   display: flex;
+  flex-direction: column; /* アイコンとテキストを縦方向に配置 */
   align-items: center;
   justify-content: center;
+  pointer-events: none; /* テキストが他の要素の操作を妨げないように */
+  // background: rgba(0, 0, 0, 0.3); /* 必要に応じて背景を半透明に */
 }
 
 .altair-text {
-  font-size: 48px; /* 文字サイズを調整 */
-  color: #fac32b; /* テキストカラーを調整（背景に応じて変更） */
+  font-size: 20px; /* 文字サイズを調整 */
+  color: #787777; /* テキストカラーを調整（背景に応じて変更） */
   font-weight: bold;
   font-family: "Space Mono";
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 文字の視認性を向上 */
+  // text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 文字の視認性を向上 */
+}
+
+.altair-image {
+  width: 20%; /* 必要に応じて調整 */
+  height: auto; /* アスペクト比を維持 */
+  margin-bottom: 0.5rem; /* 画像とテキストの間のスペース */
 }

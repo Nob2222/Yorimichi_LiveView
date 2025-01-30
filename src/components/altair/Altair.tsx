@@ -18,6 +18,7 @@ import { useEffect, useRef, useState, memo } from "react";
 // import vegaEmbed from "vega-embed";
 import { useLiveAPIContext } from "../../contexts/LiveAPIContext";
 import { ToolCall } from "../../multimodal-live-types";
+import YorimichiImage from "./Yorimichi.png"; // 画像をインポート
 
 type AltairProps = {
   isVideoOn: boolean;
@@ -57,7 +58,14 @@ function AltairComponent({ isVideoOn }: AltairProps) {
         parts: [
           {
             // text: 'You are my helpful assistant. Any time I ask you for a graph call the "render_altair" function I have provided you. Dont ask for additional information just make your best judgement.',
-            text: '関西弁で喋ってください。私は視覚障害者で目が見えません。動画を見せるので、周囲の状況を私にわかりやすく伝えてください。少しユーモアがあったほうがいいです。特徴的なものがあれば教えてください。',
+            text: `関西弁で喋ってください。
+                  私は視覚障害者で目が見えません。
+                  まず、「カメラをONにして世界を映してな〜」と言ってください。
+                  その後、映った風景を私に分かりやすく伝えてください。
+                  少しユーモアがあったほうがいいです。
+                  お散歩が楽しくなるような情報を言ってくれると嬉しいです。
+                  例えば、「スズメが楽しそうに飛んでるで〜」や、「向こうにひまわりが咲いてるで〜」など。
+                  風景で特徴的なものをピックアップして教えてください。`,
           },
         ],
       },
@@ -116,7 +124,10 @@ function AltairComponent({ isVideoOn }: AltairProps) {
   
   return (
     <div className="altair-overlay">
-      <span className="altair-text">見渡しモード</span>
+      <img src={YorimichiImage} alt="Yorimichi Icon" className="altair-image" />
+      <span className="altair-text">1.再生ボタンをONにする</span>
+      <span className="altair-text">2.マイクとカメラをONにする</span>
+      <span className="altair-text">3.何が見えますか？と話しかける</span>
     </div>
   );
   

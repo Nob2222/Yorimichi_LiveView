@@ -45,14 +45,14 @@ function AltairComponent() {
       generationConfig: {
         responseModalities: "audio",
         speechConfig: {
-          voiceConfig: { prebuiltVoiceConfig: { voiceName: "Puck" } }, //"Puck" | "Charon" | "Kore" | "Fenrir" | "Aoede" 
+          voiceConfig: { prebuiltVoiceConfig: { voiceName: "Charon" } }, //"Puck" | "Charon" | "Kore" | "Fenrir" | "Aoede" 
         },
       },
       systemInstruction: {
         parts: [
           {
             // text: 'You are my helpful assistant. Any time I ask you for a graph call the "render_altair" function I have provided you. Dont ask for additional information just make your best judgement.',
-            text: '私は視覚障害者で目が見えません。動画を見せるので、周囲の状況を私にわかりやすく伝えてください。特徴的なものがあれば教えてください。',
+            text: '関西弁で喋ってください。私は視覚障害者で目が見えません。動画を見せるので、周囲の状況を私にわかりやすく伝えてください。少しユーモアがあったほうがいいです。特徴的なものがあれば教えてください。',
           },
         ],
       },

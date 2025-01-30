@@ -58,7 +58,7 @@ function AltairComponent({ isVideoOn }: AltairProps) {
         parts: [
           {
             // text: 'You are my helpful assistant. Any time I ask you for a graph call the "render_altair" function I have provided you. Dont ask for additional information just make your best judgement.',
-            text: `関西弁で喋ってください。
+            text: `関西弁であなたから話しかけてください。
                   私は視覚障害者で目が見えません。
                   まず、「カメラをオンにして世界を映してな〜」と言ってください。
                   その後、映った風景を私に分かりやすく伝えてください。

@@ -171,25 +171,25 @@ function ControlTray({
           )}
         </button>
 
-        <div className="action-button no-action outlined">
+        {/* <div className="action-button no-action outlined">
           <AudioPulse volume={volume} active={connected} hover={false} />
-        </div>
+        </div> */}
 
         {supportsVideo && (
           <>
-            <MediaStreamButton
+            {/* <MediaStreamButton
               isStreaming={screenCapture.isStreaming}
               start={changeStreams(screenCapture)}
               stop={changeStreams()}
               onIcon="cancel_presentation"
               offIcon="present_to_all"
-            />
+            /> */}
             <MediaStreamButton
               isStreaming={webcam.isStreaming}
               start={changeStreams(webcam)}
               stop={changeStreams()}
-              onIcon="videocam_off"
-              offIcon="videocam"
+              onIcon="videocam"
+              offIcon="videocam_off"
             />
           </>
         )}

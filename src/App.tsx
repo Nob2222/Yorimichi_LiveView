@@ -45,7 +45,7 @@ function App() {
           <main>
             <div className="main-app-area">
               {/* APP goes here */}
-              <Altair />
+              <Altair isVideoOn={!!videoStream} />
               <video
                 className={cn("stream", {
                   hidden: !videoRef.current || !videoStream,

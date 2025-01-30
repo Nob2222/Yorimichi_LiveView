@@ -19,6 +19,10 @@ import { useEffect, useRef, useState, memo } from "react";
 import { useLiveAPIContext } from "../../contexts/LiveAPIContext";
 import { ToolCall } from "../../multimodal-live-types";
 
+type AltairProps = {
+  isVideoOn: boolean;
+};
+
 // const declaration: FunctionDeclaration = {
 //   name: "render_altair",
 //   description: "Displays an altair graph in json format.",
@@ -35,9 +39,10 @@ import { ToolCall } from "../../multimodal-live-types";
 //   },
 // };
 
-function AltairComponent() {
+function AltairComponent({ isVideoOn }: AltairProps) {
   // const [jsonString, setJSONString] = useState<string>("");
   const { client, setConfig } = useLiveAPIContext();
+  
 
   useEffect(() => {
     setConfig({
@@ -45,7 +50,7 @@ function AltairComponent() {
       generationConfig: {
         responseModalities: "audio",
         speechConfig: {
-          voiceConfig: { prebuiltVoiceConfig: { voiceName: "Kore" } }, //"Puck" | "Charon" | "Kore" | "Fenrir" | "Aoede" 
+          voiceConfig: { prebuiltVoiceConfig: { voiceName: "Fenrir" } }, //"Puck" | "Charon" | "Kore"1 | "Fenrir" | "Aoede" 
         },
       },
       systemInstruction: {
@@ -103,7 +108,18 @@ function AltairComponent() {
   //   }
   // }, [embedRef, jsonString]);
   // return <div className="vega-embed" ref={embedRef} />;
-  return null;
+  // return null;
+
+  if (isVideoOn) {
+    return null; // ビデオがONの時は何も表示しない
+  }
+  
+  return (
+    <div className="altair-overlay">
+      <span className="altair-text">見渡しモード</span>
+    </div>
+  );
+  
 }
 
 export const Altair = memo(AltairComponent);
